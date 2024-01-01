@@ -4,6 +4,8 @@ import "@fontsource/poppins";
 export interface CustomTheme {
   config?: ThemeConfig;
   colors: {
+    primary: string;
+    secondary: string;
     tableDivider: string;
     appDivider: string;
     buttonColor: string;
@@ -11,6 +13,8 @@ export interface CustomTheme {
     footer: string;
     footerText: string;
     footerHeading: string;
+    workTech: string;
+    inputBorderColor?: string;
 
     // Add other color properties as needed
   };
@@ -29,12 +33,15 @@ export interface CustomTheme {
 }
 
 const config: ThemeConfig = {
-  initialColorMode: "system",
+  initialColorMode: "light",
+  useSystemColorMode: false,
 };
 
 const theme = extendTheme({
   config,
   colors: {
+    primary: "#000000", // BLACK
+    secondary: "#022B57", // BLUE
     tableDivider: "gray.300",
     appDivider: "#c1c1c1",
     buttonColor: "#022B57",
@@ -42,6 +49,8 @@ const theme = extendTheme({
     footer: "#F8F8F8",
     footerText: "#4F4F4F",
     footerHeading: "#000000", // BLACK
+    workTech: "#7F7F7F",
+    inputBorderColor: "#ABABAB",
   },
   styles: {
     global: {

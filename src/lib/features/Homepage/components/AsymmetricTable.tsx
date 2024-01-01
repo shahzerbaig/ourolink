@@ -2,34 +2,10 @@ import { Box, useBreakpointValue, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
 import { CustomTheme } from "../../../../theme";
 import list from "@datautils/engineering_services";
-
-const getPrevMargin = (value: number): number => {
-  let margin: number = value;
-
-  if (margin === 0) {
-    margin = margin + 10;
-  } else if (margin === 15) {
-    margin = 0;
-  } else {
-    margin = margin + 2;
-  }
-
-  return margin;
-};
-
-const getNextMargin = (value: number): number => {
-  let margin: number = value;
-
-  if (margin === -10) {
-    margin = 0;
-  } else if (margin === 0) {
-    margin = margin + 7;
-  } else {
-    margin = margin + 5;
-  }
-
-  return margin;
-};
+import {
+  getNextMargin,
+  getPrevMargin,
+} from "src/lib/utils/get_assymetric_margins";
 
 // If 2 VDivider then 3 Cells
 

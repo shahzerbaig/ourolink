@@ -98,9 +98,8 @@ export const Footer = () => {
         }}
         bg=""
       >
-        {/* TODO */}
         {/* Footer Legals like Contact Us, Privacy Policy, T&C */}
-        {/* <FooterLegals /> */}
+        <FooterLegals />
       </GridItem>
 
       <GridItem

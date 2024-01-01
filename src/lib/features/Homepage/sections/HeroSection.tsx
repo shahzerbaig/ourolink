@@ -2,14 +2,14 @@ import { Box } from "@chakra-ui/react";
 import AppPageHeading from "../../../ui/components/AppPageHeading";
 import AppMaterialButton from "../../../ui/components/AppMaterialButton";
 import HeroImage from "../components/HeroImage";
-import Subtitle from "../components/Subtitle";
-import HomepageViewModel from "../HomepageViewModel";
+import { useHomepageViewModel } from "src/lib/providers/HomepageViewModelProvider";
+import AppPageSubheading from "src/lib/ui/components/AppPageSubheading";
+import { Link } from "react-router-dom";
+import { RoutePaths } from "src/lib/navigation/route_paths";
 
-interface Props {
-  viewModel: HomepageViewModel;
-}
+const HeroSection = () => {
+  const viewModel = useHomepageViewModel();
 
-const HeroSection = ({ viewModel }: Props) => {
   return (
     <Box
       display="flex"
@@ -26,17 +26,18 @@ const HeroSection = ({ viewModel }: Props) => {
       >
         <AppPageHeading>Paint your ideas in pixels</AppPageHeading>
         <Box height="30px" />
-        <Subtitle />
-        <Box height="25px" />
 
-        {/* TODO */}
-        {/* <AppMaterialButton
-          onClick={() => {
-            viewModel.onClickedViewPortfolio();
-          }}
-        >
-          View our portfolio
-        </AppMaterialButton> */}
+        <AppPageSubheading>
+          We help small-to-medium companies and agencies build highly scalable
+          softwares and help them do more in less time
+        </AppPageSubheading>
+
+        <Box height="25px" />
+        <Link to={RoutePaths.WORK}>
+          <AppMaterialButton onClick={() => {}}>
+            View our portfolio
+          </AppMaterialButton>
+        </Link>
       </Box>
 
       <Box height="75px" />

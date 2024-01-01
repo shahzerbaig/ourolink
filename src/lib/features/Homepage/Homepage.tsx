@@ -1,38 +1,37 @@
-import { Box } from "@chakra-ui/react";
 import BasePage from "../../base/BasePage";
-import HomepageViewModel from "./HomepageViewModel";
 import "@fontsource/comfortaa/700.css";
 import HeroSection from "./sections/HeroSection";
 import EngineeringServicesSection from "./sections/EngineeringServicesSection";
 import OurWorkSection from "./sections/OurWorkSection";
+import IndustryExperienceSection from "./sections/IndustryExperienceSection";
+import { SectionSpacing } from "src/lib/ui/components/SectionSpacing";
+import TechnologyExpertiseSection from "./sections/TechnologyExpertiseSection";
+import LetsGetInTouch from "src/lib/ui/components/LetsGetInTouch";
 
 const Homepage = () => {
-  const viewModel = new HomepageViewModel();
-
   return (
     <BasePage>
       {/* HERO SECTION */}
-      <HeroSection viewModel={viewModel} />
-
-      <Box
-        height={{
-          base: "100px",
-          md: "200px",
-        }}
-      />
+      <HeroSection />
+      <SectionSpacing />
 
       {/* ENGINEERING SERVICES SECTION */}
       <EngineeringServicesSection />
-
-      <Box
-        height={{
-          base: "100px",
-          md: "200px",
-        }}
-      />
+      <SectionSpacing />
 
       {/* OUR WORK SECTION */}
       <OurWorkSection />
+      <SectionSpacing />
+
+      {/* INDUSTRY EXPERIENCE SECTION */}
+      <IndustryExperienceSection />
+      <SectionSpacing />
+
+      {/* TECHNOLOGY EXPERTISE SECTION */}
+      <TechnologyExpertiseSection />
+      <SectionSpacing />
+
+      <LetsGetInTouch />
     </BasePage>
   );
 };

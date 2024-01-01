@@ -1,6 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import "@fontsource/poppins/300.css";
-import icon_north_east from "../../../../assets/icon_north_east.png";
+import icon_north_east from "@assets/icon_north_east.png";
 
 export interface SingleProject {
   projectName: string;
@@ -16,7 +16,7 @@ const ProjectImage = ({ project }: Props) => {
   return (
     <Image
       fit="cover"
-      height="80%"
+      // height="80%"
       borderRadius={12}
       src={project.imageURL}
     ></Image>
@@ -51,8 +51,7 @@ const ProjectDetails = ({ project }: Props) => {
 const SingleProjectSkeleton = ({ project }: Props) => {
   return (
     <Box
-      // TODO
-      // cursor="pointer"
+      // cursor="pointer" TODO if we want to make this clickable
       boxShadow="0px 2px 10px rgba(0, 0, 0, 0.1)"
       borderRadius={10}
       borderWidth={0.1}

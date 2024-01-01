@@ -3,14 +3,15 @@ import { Text } from "@chakra-ui/react";
 interface Props {
   children: string;
   onClick: () => void;
+  fontSize?: string;
 }
 
-const TextButton = ({ children, onClick }: Props) => {
+const TextButton = ({ children, onClick, fontSize = "15px" }: Props) => {
   return (
     <Text
       as="button"
       cursor="pointer"
-      fontSize="15px"
+      fontSize={fontSize}
       onClick={() => {
         onClick();
       }}

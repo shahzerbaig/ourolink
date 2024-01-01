@@ -8,6 +8,9 @@ import feed_carousel from "../../../../assets/feed_carousel.jpg";
 import betallweek_carousel from "../../../../assets/betallweek_carousel.jpg";
 import rummoz_kitchen_carousel from "../../../../assets/rummoz_kitchen_carousel.jpg";
 import AppMaterialButton from "../../../ui/components/AppMaterialButton";
+import SectionHeadingSpacing from "src/lib/ui/components/SectionHeadingSpacing";
+import { Link } from "react-router-dom";
+import { RoutePaths } from "src/lib/navigation/route_paths";
 
 const OurWorkSection = () => {
   const projects: SingleProject[] = [
@@ -24,15 +27,15 @@ const OurWorkSection = () => {
     },
 
     {
-      projectName: "GoChi",
-      category: "E-commerce",
-      imageURL: gochi_carousel,
-    },
-
-    {
       projectName: "Feed",
       category: "Institute Management",
       imageURL: feed_carousel,
+    },
+
+    {
+      projectName: "GoChi",
+      category: "E-commerce",
+      imageURL: gochi_carousel,
     },
   ];
 
@@ -40,7 +43,7 @@ const OurWorkSection = () => {
     <>
       <AppSectionHeading>Our Work</AppSectionHeading>
 
-      <Box height="100px" />
+      <SectionHeadingSpacing />
 
       <Box paddingX="10px">
         <SimpleGrid
@@ -53,10 +56,11 @@ const OurWorkSection = () => {
           ))}
         </SimpleGrid>
 
-        {/* TODO */}
-        {/* <Box height="50px" /> */}
+        <Box height="50px" />
 
-        {/* <AppMaterialButton onClick={() => {}}>View More</AppMaterialButton> */}
+        <Link to={RoutePaths.WORK}>
+          <AppMaterialButton onClick={() => {}}>View More</AppMaterialButton>
+        </Link>
       </Box>
     </>
   );

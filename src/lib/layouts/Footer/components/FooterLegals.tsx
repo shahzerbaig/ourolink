@@ -3,21 +3,32 @@ import FooterTextButton, { FooterTextButtonProps } from "./FooterTextButton";
 import FooterVSpace from "./FooterVSpace";
 import FooterHeading from "./FooterHeading";
 import FooterText from "./FooterText";
+import { useNavigate } from "react-router-dom";
+import { RoutePaths } from "src/lib/navigation/route_paths";
+import { AppConstants } from "src/domain/constants/AppConstants";
 
 const FooterLegals = () => {
+  const navigate = useNavigate();
+
   const listOfLegals: FooterTextButtonProps[] = [
     {
       label: "Contact us",
-      onClick: () => {},
+      onClick: () => {
+        navigate(RoutePaths.CONTACT_US);
+      },
     },
     {
       label: "Privacy Policy",
-      onClick: () => {},
+      onClick: () => {
+        navigate(RoutePaths.PRIVACY_POLICY);
+      },
     },
 
     {
       label: "Terms and conditions",
-      onClick: () => {},
+      onClick: () => {
+        navigate(RoutePaths.TERMS_AND_CONDITIONS);
+      },
     },
   ];
 
@@ -45,13 +56,13 @@ const FooterLegals = () => {
 
       <FooterHeading>For sales</FooterHeading>
       <FooterVSpace />
-      <FooterText>ourolink@business.com</FooterText>
+      <FooterText>{AppConstants.CONTACT_US_EMAIL}</FooterText>
       <FooterVSpace />
       <FooterVSpace />
 
       <FooterHeading>For jobs</FooterHeading>
       <FooterVSpace />
-      <FooterText>talent.ourolink@business.com</FooterText>
+      <FooterText>{AppConstants.CONTACT_US_EMAIL}</FooterText>
     </>
   );
 };
