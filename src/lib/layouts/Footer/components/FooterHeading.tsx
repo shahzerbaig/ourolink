@@ -9,7 +9,7 @@ const FooterHeading = (props: FooterHeadingProps) => {
   const theme = useTheme<CustomTheme>();
 
   return (
-    <Text fontWeight="500" color={theme.colors.footerHeading} fontSize={14}>
+    <Text fontWeight="500" color={theme.colors.secondary} fontSize={14}>
       {props.children}
     </Text>
   );

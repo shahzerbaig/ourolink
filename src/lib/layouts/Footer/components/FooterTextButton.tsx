@@ -24,7 +24,7 @@ const FooterTextButton = ({
       }}
       // fontWeight="500"
       // color={theme.colors.footerText}
-      color={theme.colors.buttonColor}
+      color={theme.colors.accent}
       letterSpacing={1}
       fontSize={fontSize}
     >

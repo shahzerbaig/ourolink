@@ -42,6 +42,7 @@ import mandi3 from "@assets/projects/mandi_3.jpg";
 import imageRummozAdmin1 from "@assets/projects/rummoz_admin_1.png";
 import imageRummozAdmin2 from "@assets/projects/rummoz_admin_2.png";
 import { DeviceTypeEnum } from "src/domain/enums/device_type_enum";
+import React from "react";
 
 export default [
   // RUUMOZ KITCHEN
@@ -73,6 +74,7 @@ export default [
         alt: "Rummo'z Kitchen 3",
       },
     ],
+    ref: React.createRef(),
   },
 
   // RUMMOZ KITCHEN ADMIN PORTAL
@@ -93,6 +95,7 @@ export default [
         alt: "Rummo'z Kitchen Admin Portal 2",
       },
     ],
+    ref: React.createRef(),
   },
 
   // BET ALL WEEK
@@ -123,6 +126,7 @@ export default [
         alt: "Bet All Week 3",
       },
     ],
+    ref: React.createRef(),
   },
 
   // FEED
@@ -155,6 +159,7 @@ export default [
         alt: "Feed 3",
       },
     ],
+    ref: React.createRef(),
   },
 
   // GOCHI
@@ -187,6 +192,7 @@ export default [
         alt: "GoChi 3",
       },
     ],
+    ref: React.createRef(),
   },
 
   // GOCHI ADMIN PORTAL
@@ -219,6 +225,7 @@ export default [
         alt: "GoChi Admin Portal 3",
       },
     ],
+    ref: React.createRef(),
   },
 
   // KNIGHT 9
@@ -246,6 +253,7 @@ export default [
 
       ,
     ],
+    ref: React.createRef(),
   },
 
   // HANZAIB COLLECTION
@@ -271,6 +279,7 @@ export default [
         alt: "Hanzaib 3",
       },
     ],
+    ref: React.createRef(),
   },
 
   // MANDI MARKET
@@ -303,10 +312,11 @@ export default [
         alt: "Mandi Market 3",
       },
     ],
+    ref: React.createRef(),
   },
 ] as WorkStackProps[];
 
-interface WorkStackProps {
+export interface WorkStackProps {
   projectName: string;
   slug: string;
   description: string;
@@ -314,6 +324,7 @@ interface WorkStackProps {
   images: WorkStackImageProps[];
   backgroundColor?: string;
   deviceType: DeviceTypeEnum;
+  ref?: React.RefObject<HTMLDivElement>;
 }
 
 export interface WorkStackImageProps {

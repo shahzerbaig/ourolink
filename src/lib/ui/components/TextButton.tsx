@@ -12,6 +12,7 @@ const TextButton = ({ children, onClick, fontSize = "15px" }: Props) => {
       as="button"
       cursor="pointer"
       fontSize={fontSize}
+      bg=""
       onClick={() => {
         onClick();
       }}

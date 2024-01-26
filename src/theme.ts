@@ -1,18 +1,17 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 import "@fontsource/poppins";
+import { AppColor } from "./domain/constants/AppColor";
 
 export interface CustomTheme {
   config?: ThemeConfig;
   colors: {
     primary: string;
     secondary: string;
+    accent: string;
     tableDivider: string;
     appDivider: string;
-    buttonColor: string;
-    buttonTextColor: string;
     footer: string;
     footerText: string;
-    footerHeading: string;
     workTech: string;
     inputBorderColor?: string;
 
@@ -40,23 +39,21 @@ const config: ThemeConfig = {
 const theme = extendTheme({
   config,
   colors: {
-    primary: "#000000", // BLACK
-    secondary: "#022B57", // BLUE
-    tableDivider: "gray.300",
+    primary: AppColor.WHITE,
+    secondary: AppColor.BLACK,
+    accent: AppColor.DARK_BLUE,
+    tableDivider: AppColor.GRAY_300,
+    footer: AppColor.OFFWHITE,
     appDivider: "#c1c1c1",
-    buttonColor: "#022B57",
-    buttonTextColor: "white",
-    footer: "#F8F8F8",
     footerText: "#4F4F4F",
-    footerHeading: "#000000", // BLACK
     workTech: "#7F7F7F",
     inputBorderColor: "#ABABAB",
   },
   styles: {
     global: {
       "html, body": {
-        bg: "white",
-        color: "black",
+        bg: AppColor.WHITE,
+        color: AppColor.BLACK,
       },
     },
   },

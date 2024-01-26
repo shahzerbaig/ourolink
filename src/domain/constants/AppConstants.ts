@@ -8,4 +8,7 @@ export class AppConstants {
   public static LINKEDIN_ALT_TEXT: string = "LinkedIn Icon Alt Text";
   public static CONTACT_US_PHONE: string = "+91 91674 10616";
   public static CONTACT_US_EMAIL: string = "ourolink@proton.me";
+
+  // Firebase Collections
+  public static CONTACT_US_COLLECTION: string = "contactUs";
 }

@@ -1,0 +1,13 @@
+@import "/node_modules/slick-carousel/slick/slick.css";
+@import "/node_modules/slick-carousel/slick/slick-theme.css";
+
+.custom-slider {
+  width: 95%;
+  max-width: 550px;
+  margin: 0 auto;
+  /* background-color: red; */
+}
+
+.arrow {
+  size: 2rem;
+}

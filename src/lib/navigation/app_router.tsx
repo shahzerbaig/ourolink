@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Homepage from "../features/Homepage/Homepage";
 import Work from "../features/Work/Work";
 import { RoutePaths } from "./route_paths";
@@ -6,6 +6,8 @@ import { ContactUs } from "../features/ContactUs/ContactUs";
 import PrivacyPolicyPage from "../features/PrivacyPolicy/PrivacyPolicyPage";
 import TermsAndConditionsPage from "../features/TermsAndConditions/TermsAndConditionsPage";
 import { useEffect } from "react";
+import RecentWork from "../features/RecentWork/RecentWork";
+import Splash from "../features/Splash/Splash";
 
 const AppRouter = () => {
   // Here we are using the useLocation hook to get the current location [current page] of the app.
@@ -23,10 +25,13 @@ const AppRouter = () => {
 
   return (
     <Routes>
+      <Route path={RoutePaths.SPLASH} Component={Splash} />
       <Route path={RoutePaths.HOMEPAGE} Component={Homepage} />
       <Route path={RoutePaths.WORK} Component={Work} />
       <Route path={RoutePaths.CONTACT_US} Component={ContactUs} />
       <Route path={RoutePaths.PRIVACY_POLICY} Component={PrivacyPolicyPage} />
+      <Route path={RoutePaths.RECENT_WORK} Component={RecentWork} />
+
       <Route
         path={RoutePaths.TERMS_AND_CONDITIONS}
         Component={TermsAndConditionsPage}

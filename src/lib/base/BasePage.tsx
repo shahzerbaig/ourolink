@@ -1,7 +1,8 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "../layouts/NavBar/NavBar";
 import { Footer } from "../layouts/Footer/Footer";
 import BasePageViewModel from "./BasePageViewModel";
+import ScrollToTopButton from "@components/ScrollToTopButton";
 
 interface Props {
   children?: React.ReactNode;
@@ -14,8 +15,12 @@ const BasePage = ({ children }: Props) => {
 
   return (
     <Grid templateAreas={`"nav" "content" "footer"`}>
+      {/* Scroll to top button */}
+      <ScrollToTopButton />
+
       <GridItem area="nav">
         <NavBar />
+        <Box height="80px"></Box>
       </GridItem>
 
       <GridItem

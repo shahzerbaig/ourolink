@@ -24,11 +24,11 @@ const _TechItem = ({ onClick, text, isSelected = false }: TechItemProps) => {
         textAlign="center"
         paddingX={paddingX}
         paddingY={paddingY}
-        bg={theme.colors.buttonColor}
+        bg={theme.colors.accent}
       >
         <Text
           fontSize={fontSize}
-          color={theme.colors.buttonTextColor}
+          color={theme.colors.primary}
           fontWeight="bold"
         >
           {text}

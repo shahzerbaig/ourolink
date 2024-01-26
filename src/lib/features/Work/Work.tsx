@@ -4,9 +4,16 @@ import WorkHeroSection from "./sections/WorkHeroSection";
 import { SectionSpacing } from "src/lib/ui/components/SectionSpacing";
 import ProjectsSection from "./sections/ProjectsSection";
 import LetsGetInTouch from "src/lib/ui/components/LetsGetInTouch";
+import { useEffect } from "react";
 
 const Work = () => {
   const workV = useWorkViewModel();
+
+  useEffect(() => {
+    return () => {
+      workV.dispose();
+    };
+  }, []);
 
   return (
     <BasePage>

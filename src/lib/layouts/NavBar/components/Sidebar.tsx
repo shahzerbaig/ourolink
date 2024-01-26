@@ -6,6 +6,7 @@ import {
   VStack,
   HStack,
   Box,
+  useTheme,
 } from "@chakra-ui/react";
 import iconClose from "@assets/icon_close.png";
 import LogoImage from "src/lib/features/Homepage/components/LogoImage";
@@ -15,6 +16,7 @@ import { RoutePaths } from "src/lib/navigation/route_paths";
 import scrollToEndOfPage from "src/lib/utils/scroll_to_end_of_page";
 import scrollToComponent from "src/lib/utils/scroll_to_component";
 import { useHomepageViewModel } from "src/lib/providers/HomepageViewModelProvider";
+import { CustomTheme } from "src/theme";
 
 interface Props {
   onClose: () => void;
@@ -24,13 +26,16 @@ interface Props {
 const _Header = ({ onClose }: Props) => {
   const navigate = useNavigate();
 
+  const onClickHomepage = () => {
+    onClose();
+    navigate(RoutePaths.HOMEPAGE);
+  };
+
   return (
     <HStack justifyContent="space-between">
       {/* Logo Image */}
       <LogoImage
-        onClick={() => {
-          navigate(RoutePaths.HOMEPAGE);
-        }}
+        onClick={onClickHomepage}
         height={{
           base: "25px",
           md: "35px",
@@ -60,7 +65,7 @@ const SidebarContent = (props: Props) => {
   const onClickServices = async () => {
     props.onClose();
     navigate(RoutePaths.HOMEPAGE);
-    scrollToComponent(homepageVm.engineeringServicesRefObj);
+    scrollToComponent(homepageVm.engineeringServicesRefObj, "center");
   };
 
   const onClickContactUs = () => {
@@ -82,6 +87,8 @@ const SidebarContent = (props: Props) => {
 };
 
 const Sidebar = ({ isOpen, onClose }: Props) => {
+  const theme = useTheme<CustomTheme>();
+
   return (
     <Drawer
       isFullHeight={true}
@@ -90,7 +97,12 @@ const Sidebar = ({ isOpen, onClose }: Props) => {
       onClose={onClose}
     >
       <DrawerOverlay width="100%" height="100%">
-        <DrawerContent paddingX="20px" paddingTop="20px" paddingBottom="25px">
+        <DrawerContent
+          bg={theme.colors.primary}
+          paddingX="20px"
+          paddingTop="20px"
+          paddingBottom="25px"
+        >
           {/* Drawer HEading */}
           <_Header isOpen={isOpen} onClose={onClose} />
 

@@ -86,7 +86,7 @@ const _DesktopSideComponents = () => {
 
   const onClickServices = () => {
     navigate(RoutePaths.HOMEPAGE);
-    scrollToComponent(homepageVm.engineeringServicesRefObj);
+    scrollToComponent(homepageVm.engineeringServicesRefObj, "center");
   };
 
   const onClickAboutUs = () => {
@@ -120,7 +120,17 @@ const _DesktopSideComponents = () => {
 
 const NavBar = () => {
   return (
-    <>
+    <Box
+      bg="rgba(255, 255, 255, 0.4)"
+      width="100%"
+      pos="fixed"
+      // bg="white"
+      zIndex={1}
+      style={{
+        WebkitBackdropFilter: "blur(5px)",
+        backdropFilter: "blur(5px)",
+      }}
+    >
       <HStack className="navbar-container" justify="space-between">
         <LogoImage
           height={{
@@ -137,7 +147,7 @@ const NavBar = () => {
       </HStack>
 
       <AppDivider />
-    </>
+    </Box>
   );
 };
 

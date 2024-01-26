@@ -1,11 +1,17 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import "@fontsource/poppins/300.css";
 import icon_north_east from "@assets/icon_north_east.png";
+import { useNavigate } from "react-router-dom";
+import { RoutePaths } from "src/lib/navigation/route_paths";
+import { useHomepageViewModel } from "src/lib/providers/HomepageViewModelProvider";
+import { RecentWorkNavParams } from "../../RecentWork/RecentWork";
 
 export interface SingleProject {
   projectName: string;
   category: string;
   imageURL: string;
+  slug: string;
+  currentIndexOnWorkPage: number;
 }
 
 interface Props {
@@ -49,9 +55,28 @@ const ProjectDetails = ({ project }: Props) => {
 };
 
 const SingleProjectSkeleton = ({ project }: Props) => {
+  const navigate = useNavigate();
+  const homepageVM = useHomepageViewModel();
+
+  project.projectName;
+
+  // let selectedProject =
+
+  const onClickWork = () => {
+    homepageVM.setCurrentProjectIndexOnWorkPage(project.currentIndexOnWorkPage);
+
+    const params: RecentWorkNavParams = {
+      slug: project.slug,
+    };
+
+    navigate(RoutePaths.RECENT_WORK, { state: params });
+    // set the selected project
+  };
+
   return (
     <Box
-      // cursor="pointer" TODO if we want to make this clickable
+      onClick={onClickWork}
+      cursor="pointer"
       boxShadow="0px 2px 10px rgba(0, 0, 0, 0.1)"
       borderRadius={10}
       borderWidth={0.1}

@@ -18,7 +18,9 @@
     "baseUrl": "./",
     "paths": {
       "@assets/*": ["src/assets/*"],
-      "@datautils/*": ["src/data/utils/*"]
+      "@datautils/*": ["src/data/utils/*"],
+      "@datafirebase/*": ["src/data/firebase/*"],
+      "@components/*": ["src/lib/ui/components/*"],
     },
   },
   "include": ["src/**/*"],

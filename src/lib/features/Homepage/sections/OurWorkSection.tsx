@@ -18,24 +18,32 @@ const OurWorkSection = () => {
       projectName: "Rummo'z Kitchen",
       category: "Food Tech",
       imageURL: rummoz_kitchen_carousel,
+      slug: "rummoz-kitchen",
+      currentIndexOnWorkPage: 0,
     },
 
     {
       projectName: "BetAllWeek",
       category: "Online Gaming",
       imageURL: betallweek_carousel,
+      slug: "bet-all-week",
+      currentIndexOnWorkPage: 2,
     },
 
     {
       projectName: "Feed",
       category: "Institute Management",
       imageURL: feed_carousel,
+      slug: "feed",
+      currentIndexOnWorkPage: 3,
     },
 
     {
       projectName: "GoChi",
       category: "E-commerce",
       imageURL: gochi_carousel,
+      slug: "gochi",
+      currentIndexOnWorkPage: 4,
     },
   ];
 

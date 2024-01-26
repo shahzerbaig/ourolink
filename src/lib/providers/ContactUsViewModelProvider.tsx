@@ -12,11 +12,25 @@ const ViewModelContext = createContext<
 
 export const ContactUsViewModelProvider: React.FC<
   ContactUsViewModelContextProps
-> = ({ viewModel, children }) => (
-  <ViewModelContext.Provider value={{ viewModel, children }}>
-    {children}
-  </ViewModelContext.Provider>
-);
+> = ({ viewModel, children }) => {
+  // viewModel = new ContactUsViewModel();
+
+  return (
+    <ViewModelContext.Provider value={{ viewModel, children }}>
+      {children}
+    </ViewModelContext.Provider>
+  );
+};
+
+// export const ContactUsViewModelProvider: React.FC = ({ viewModel, children }) => {
+//   const viewModel = new ContactUsViewModel();
+
+//   return (
+//     <ViewModelContext.Provider value={{ viewModel, children }}>
+//       {children}
+//     </ViewModelContext.Provider>
+//   );
+// };
 
 export const useContactUsViewModel = () => {
   const context = useContext(ViewModelContext);

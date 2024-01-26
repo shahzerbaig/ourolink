@@ -1,5 +1,6 @@
 import listOfIndustryExperiences from "@datautils/industry_experiences";
 import React from "react";
+import AnimationOnLoadProperties from "src/lib/utils/animation_on_load_properties";
 
 class HomepageViewModel {
   noOfVDividersInIndustryExp: Record<string, number> = {
@@ -40,6 +41,22 @@ class HomepageViewModel {
   // Setter for the Engineering Services Reference Object
   setEngineeringServicesRefObj(ref: React.RefObject<HTMLDivElement>): void {
     this._engineeringServicesRefObj = ref;
+  }
+
+  private _currentProjectIndexOnWorkPage: number = 0;
+
+  get currentProjectIndexOnWorkPage(): number {
+    return this._currentProjectIndexOnWorkPage;
+  }
+
+  setCurrentProjectIndexOnWorkPage(index: number): void {
+    this._currentProjectIndexOnWorkPage = index;
+  }
+
+  public animationOnLoadProps = new AnimationOnLoadProperties();
+
+  dispose(): void {
+    this.animationOnLoadProps = new AnimationOnLoadProperties();
   }
 }
 

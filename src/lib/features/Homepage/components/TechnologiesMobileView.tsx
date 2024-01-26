@@ -37,10 +37,10 @@ const _TechItem = ({ onClick, text, isSelected = false }: TechItemProps) => {
         cursor="pointer"
         textAlign="center"
         paddingX={paddingX}
-        bg={theme.colors.buttonColor}
+        bg={theme.colors.accent}
       >
         <Text
-          color={theme.colors.buttonTextColor}
+          color={theme.colors.primary}
           fontSize={fontSize}
           fontWeight="bold"
         >

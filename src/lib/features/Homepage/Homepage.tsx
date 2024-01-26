@@ -7,8 +7,18 @@ import IndustryExperienceSection from "./sections/IndustryExperienceSection";
 import { SectionSpacing } from "src/lib/ui/components/SectionSpacing";
 import TechnologyExpertiseSection from "./sections/TechnologyExpertiseSection";
 import LetsGetInTouch from "src/lib/ui/components/LetsGetInTouch";
+import { useHomepageViewModel } from "src/lib/providers/HomepageViewModelProvider";
+import { useEffect } from "react";
 
 const Homepage = () => {
+  const viewmodel = useHomepageViewModel();
+
+  useEffect(() => {
+    return () => {
+      viewmodel.dispose();
+    };
+  }, []);
+
   return (
     <BasePage>
       {/* HERO SECTION */}
