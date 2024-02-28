@@ -51,7 +51,7 @@ export default [
     deviceType: DeviceTypeEnum.MOBILE,
     slug: "rummoz-kitchen",
     description:
-      "Introducing our groundbreaking cloud kitchen app, designed to transform the way you experience food delivery. This innovative platform offers the ultimate in dining convenience, featuring both on-demand orders and subscription-based services. With no physical dine-in space, we focus exclusively on fulfilling your online orders, bringing a rich variety of meals right to your doorstep. Whether you’re craving an instant culinary delight or prefer the ease of scheduled meal deliveries, our app caters to your every need. Our subscription service is perfect for those who value consistency and convenience, providing regular, hassle-free meal deliveries. Each dish is prepared in our specialized cloud kitchens, ensuring that every order is fresh, delicious, and promptly delivered. Our user-friendly app is designed with your lifestyle in mind, offering personalized choices and a seamless ordering experience. Embrace the future of dining with us, where quality, variety, and convenience meet at the touch of a button.",
+      "Introducing an application that can automate a cloud kitchen process, from order management to delivery, Rummo’z Kitchen is a perfect software solution for Independent Cloud kitchen owners. It provides a subscription based ecosystem where the User subscribes for food delivery at door step for monthly basis.",
     techStack: [
       "flutter",
       "cloud firestore",
@@ -83,7 +83,7 @@ export default [
     deviceType: DeviceTypeEnum.DESKTOP,
     slug: "rummoz-kitchen-admin-portal",
     description:
-      "Experience the future of dining with our revolutionary cloud kitchen app, your gateway to a world of culinary delights. Our app's dashboard, a masterpiece of Food Tech innovation, is a blend of aesthetics and functionality. Powered by Firebase and Flutter, it offers real-time push notifications, secure cloud storage, and seamless user authentication. Immerse yourself in an intuitive interface where ordering sumptuous meals is just a tap away. Whether it's exploring our diverse menu for an instant feast or scheduling your weekly meal subscriptions, our app ensures a personalized and hassle-free experience. Join us in redefining convenience and taste, where every order promises freshness, variety, and unmatched quality, delivered straight to your doorstep.",
+      "This admin panel is used for managing Rummo’z kitchen application, right from updating menu to getting insights of the user. The owner will have the different options like 1. Add Discount Coupon 2. Set Offers 3. Manage Subscription",
     techStack: [],
     images: [
       {
@@ -105,7 +105,7 @@ export default [
     slug: "bet-all-week",
     backgroundColor: "#4A148C",
     description:
-      "Our newly developed mobile gaming application is an exciting platform for NFL fans who enjoy betting on matches. This easy-to-use app allows users to bet real money on NFL games, adding an extra layer of thrill and engagement to the football season. The app features a straightforward interface, making it simple for users to navigate through various NFL matches and place their bets. Users can choose from a wide range of betting options, such as predicting the winning team, the scoreline, or specific player performances. This variety ensures that both seasoned bettors and newcomers can find options that suit their preferences and level of expertise. Security and reliability are at the core of our app. We use advanced encryption to protect user data and transactions, ensuring a safe betting environment. Our app also provides live updates on NFL games, so users can track their bets in real-time and stay informed about game progress and results. Moreover, our platform supports responsible gaming. We have implemented features to help users manage their spending and betting habits, promoting a healthy and enjoyable gaming experience. Whether you’re a die-hard NFL fan or a casual viewer looking to add excitement to the games, our betting app offers a unique and secure way to engage with your favorite sport.",
+      "Imagine a gaming application that will let you earn money on your gut feeling, amazing right? Introducing BetAllWeek an online gaming application where users can play against all odds. State of the art systems with low latency delay, that will take the experience of gaming to the next level.",
     techStack: [
       "flutter",
       "cloud firestore",
@@ -136,7 +136,7 @@ export default [
     slug: "feed",
     backgroundColor: "",
     description:
-      "Connect and engage with 'Feed,' your vibrant college social platform! Share educational posts, personal stories, and build a professional presence with a unique profile. Connect with your campus community like never before, exploring and networking with peers and faculty. Stay updated on essential college functions, from attendance to notices. 'Feed' isn't just an app; it's your gateway to a richer, more connected campus life. Experience college networking redefined!",
+      "A social application for universities where students can keep track of each other's academic advancement, it creates a sense of competition in students while building a strong community over campus. Connect with your campus community like never before, exploring and networking with peers and faculty. Stay updated on essential college functions, from attendance to notices. 'Feed' isn't just an app; it's your gateway to a richer, more connected campus life. Experience college networking redefined!",
     techStack: [
       "flutter",
       "cloud firestore",
@@ -169,7 +169,7 @@ export default [
     slug: "gochi",
     backgroundColor: "#D17673",
     description:
-      "We proudly present GoChi - the cutting-edge app crafted by our team! Now available on the Google Play Store, GoChi redefines online meat ordering. In lockdown times, we bring the convenience of safe, doorstep delivery for the finest, halal-certified, and 100% chemical-free meats. GoChi is not just about ease; it's about quality. We ensure that users receive only the freshest and finest meats, perfect for culinary adventures. With GoChi, we aim to enhance the joy of cooking with premium ingredients, ensuring every meal is a masterpiece. Download GoChi now and experience the convenience and quality we've crafted for you!",
+      "Introducing GoChi – our cutting-edge app now on Google Play! Enjoy easy, safe, and quality meat delivery to your doorstep. Get the freshest halal-certified, chemical-free meats for delightful cooking. Download GoChi for a convenient and premium culinary experience. Your masterpiece meals await!",
     techStack: [
       "flutter",
       "cloud firestore",
@@ -202,7 +202,7 @@ export default [
     slug: "gochi-admin-portal",
     backgroundColor: "#E5AAA9",
     description:
-      "Embark on effortless gourmet cooking with GoChi's tech-savvy dashboard! Crafted with Flutter and powered by Firebase, it offers seamless navigation, real-time updates, secure storage, and swift authentication. Simplify your meat selection to doorstep delivery journey, whether it's succulent mutton, tender chicken, or fresh eggs. GoChi's dashboard ensures culinary excellence, providing freshness and quality at your fingertips. Elevate your cooking with convenience and premium meats on GoChi's dashboard",
+      "GoChi's simple admin panel, made with Flutter and powered by Firebase, makes gourmet cooking easy! Navigate easily, get updates quickly, and ensure security with fast login. Manage meat orders effortlessly, choosing from tasty mutton, tender chicken, or fresh eggs. GoChi's user-friendly dashboard promises great cooking with convenience and top-quality meats at your fingertips!",
     techStack: [
       "flutter",
       "cloud firestore",
@@ -235,7 +235,7 @@ export default [
     slug: "knight-9",
     backgroundColor: "#465777",
     description:
-      "Enter the exciting realm of 'Knight Nine,' where gaming meets high stakes! Join exclusive 9-player contests with a simple admission fee, battling it out for rewarding cash prizes. It's not just a game; 'Knight Nine' is your chance to showcase skills, challenge competitors, and earn big. With its user-friendly interface and secure payment system, entering contests is seamless and safe. Ready to turn your gaming skills into rewards? Download 'Knight Nine' now and join the ultimate gaming arena where victory pays off!",
+      "Explore the fun world of ‘Knight Nine’! Play in 9-player contests for a small fee, win cash prizes, and show off your skills. It’s easy and safe with a simple interface and secure payments. Download ‘Knight Nine’ now to turn your gaming into rewards and join the ultimate arena where winning pays off!",
     techStack: ["react native", "react", "node js"],
     images: [
       {

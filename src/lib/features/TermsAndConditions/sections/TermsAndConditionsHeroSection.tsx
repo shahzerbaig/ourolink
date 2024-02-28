@@ -12,7 +12,7 @@ const TermsAndConditionsHeroSection = () => {
     <Flex flexDirection="column">
       {/* Effective Date */}
       <Text textColor={theme.colors.workTech} fontSize={12} fontWeight="600">
-        Effective date: 23, July 2023
+        Effective date: 23 July, 2023
       </Text>
 
       <Box height="15px" />
@@ -23,16 +23,16 @@ const TermsAndConditionsHeroSection = () => {
       <Box height="30px" />
 
       {/* Last Updated Date */}
-      <Text fontSize={12}>Last updated: 23, July 2023</Text>
+      <Text fontSize={12}>Last updated: 1 December, 2023</Text>
 
       <Box height="50px" />
 
       {/* The Sub heading of the Hero */}
       <AppPageSubheading>
-        This Privacy Policy describes how [Your Company/Your Name] ("we," "us,"
-        or "our") collects, uses, and shares information about you and explains
-        the choices you have concerning the information. By using our
-        [website/application], you agree to the terms of this Privacy Policy.
+        Welcome to Ourolink (“Company”, “we”, “us”, or “our”). We provide
+        Software as a Service (SaaS) solutions to businesses, subject to the
+        following Terms and Conditions. By accessing or using our service, you
+        agree to be bound by these terms.
       </AppPageSubheading>
 
       <SectionHeadingSpacing />

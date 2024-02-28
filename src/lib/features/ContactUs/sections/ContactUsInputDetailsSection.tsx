@@ -135,7 +135,6 @@ const _ContactDetails = () => {
         <Box height="15px" />
         {phone}
       </AnimateOnLoad>
-      ;
     </Flex>
   );
 };

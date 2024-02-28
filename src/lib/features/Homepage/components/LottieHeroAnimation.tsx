@@ -1,4 +1,4 @@
-import Lottie from "react-lottie";
+import Lottie, { LottieProps, Options } from "react-lottie";
 import animationData from "@assets/lotties/cubes_rotate_lottie.json";
 
 interface LottieHeroAnimationProps {
@@ -6,7 +6,7 @@ interface LottieHeroAnimationProps {
 }
 
 const LottieHeroAnimation = (props: LottieHeroAnimationProps) => {
-  const defaultOptions = {
+  const defaultOptions: Options = {
     loop: true,
     autoplay: true,
     animationData: animationData,

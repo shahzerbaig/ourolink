@@ -7,6 +7,7 @@ import gochi_carousel from "../../../../assets/gochi_carousel.jpg";
 import feed_carousel from "../../../../assets/feed_carousel.jpg";
 import betallweek_carousel from "../../../../assets/betallweek_carousel.jpg";
 import rummoz_kitchen_carousel from "../../../../assets/rummoz_kitchen_carousel.jpg";
+import mandi_market_carousel from "@assets/mandi_market_carousel.jpg";
 import AppMaterialButton from "../../../ui/components/AppMaterialButton";
 import SectionHeadingSpacing from "src/lib/ui/components/SectionHeadingSpacing";
 import { Link } from "react-router-dom";
@@ -31,10 +32,10 @@ const OurWorkSection = () => {
     },
 
     {
-      projectName: "Feed",
-      category: "Institute Management",
-      imageURL: feed_carousel,
-      slug: "feed",
+      projectName: "Mandi Market",
+      category: "Market Place",
+      imageURL: mandi_market_carousel,
+      slug: "mandi-market",
       currentIndexOnWorkPage: 3,
     },
 
